@@ -1,0 +1,144 @@
+<!DOCTYPE=html>
+<html>
+	<style>
+		#nav-bar {
+			position: fixed;
+			display: flex;
+			width: 100%;
+			top: 0px;
+			left: 0px;
+			/*margin-right: 0px;*/
+			display: inline;
+			text-align: end;
+			
+			padding: 15px;
+			
+			border-radius: 5px;
+			
+		}
+		.navbar {
+			display: inline-block;
+			padding: 10px;
+			z-index: 2;
+		}
+		#nav-dropdown {
+			
+			display: inline-block;
+			
+			/*height: 50px;
+			width: 50px;*/
+			background-image: url('https://thecraftingchicks.com/wp-content/uploads/2014/08/sm-photo-story-template.jpg');
+			background-size: 20px 20px;
+		}
+		
+		/*#nav-dropdown:focus {
+			background-color: red;
+		}*/
+		#dropdown-content {
+			display: none;
+			position: absolute;
+			border: solid;
+			background-color: #f9f9f9;
+			min-width: 100px;
+			padding: 10px 10px;
+			z-index: 3;
+			grid-template-columns: 100px;
+			right: 75px;
+		}
+		#nav-dropdown:focus #dropdown-content {
+			display: grid;
+		}
+		#container {
+			max-height: 90vh;
+			width: 100vw;
+			
+			border-color: blue;
+			top: 80px;
+			z-index: 1;
+		}
+		.content {
+			position: relative;
+			display: grid;
+			
+			
+			justify-content: start;
+			align-items: end;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: 30vh 15vh 15vh 10vh 10vh 20vh;
+			grid-template-areas:
+			". . ."
+			". google-logo ."
+			". search-box ."
+			". buttons ."
+			". sentence ."
+			". . ."		
+		}
+		#google-logo {
+			position: relative;
+			display: block;
+			grid-area: google-logo;
+			justify-self: center;
+			align-self: start;
+		}
+		#search-box {
+			position: relative;
+			display: block;
+			grid-area: search-box;
+			justify-self: center;
+			align-self: center;
+		}
+		#buttons {
+			grid-area: buttons;
+			display: block;			
+			align-self: center;
+			justify-self: center;	
+		}
+		.sentence {
+			grid-area: sentence;
+			display: block;
+			align-self: center;
+			justify-self: center;
+		}
+			
+	</style>
+	<body>
+		<main>
+			<nav id="nav-bar">
+				<a id="nav-gmail" class="navbar" href="">Gmail</a>
+				<a id="nav-images" class="navbar" href="">Images</a>
+				<button href="" id="nav-dropdown" class="navbar x">
+				<!--<img class="x" src="https://thecraftingchicks.com/wp-content/uploads/2014/08/sm-photo-story-template.jpg">-->
+					<div id="dropdown-content">
+						<a id="nav-account" href="">Account</a>
+						<a id="nav-search" href="">Search</a>
+						<a id="nav-maps" href="">Maps</a>
+						<a id="nav-youtube" href="">Youtube</a>
+					</div>
+				</button>
+				<div class="navbar">J</div>
+			</nav>
+			<div id="container" class="content">
+				<div id="google-logo" class="content">
+					<img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+				</div>
+				<div id="search-box" class="content">
+					<form>
+						<input type="search">
+					</form>
+				</div>
+				<div id="buttons" class="content">
+					<form>
+						<input type="button" id="google-search" value="Google Search">
+						<input type="button" id="feeling-lucky" value="I'm Feeling Lucky">
+					</form>
+				</div>
+				<div class="sentence" class="content">
+					<p id="paragraph" class="sentence">Google offered in: <a href="">slovencina</a></p>
+				</div>
+			</div>		
+			</div id="footer">
+
+			</div>
+		</main>
+	</body>
+</html>
